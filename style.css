@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #191919;
+}
+
+.gallary {
+    width: 900px;
+    display: flex;
+    overflow: scroll;
+}
+
+.gallary div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    transition: ease-in-out all 1s;
+}
+
+.gallary div img {
+    width: 100%;
+    height: 100%;
+    transition: ease-in-out all .4s;
+    filter: grayscale(100);
+}
+
+.gallary div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.gallary::-webkit-scrollbar {
+    display: none;
+}
+
+.gallary-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+.gallary-wrap span.icon {
+    color: white;
+    background-color: orangered;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.gallary-wrap span.back {
+    padding: 25px 35px 25px 30px;
+}
+
+.gallary-wrap span.forward {
+    padding: 25px 24px 21px 30px;
+}
